@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoView</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
+    <style>
+        body {
+            background-image: url('./igeobackground.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .logo-container {
+            text-align: center;
+            padding: 10px;
+        }
+        #weather-info {
+            color: white;
+        }
+        label {
+            color: white;
+        }
+        #mapid {
+            width: 100%;
+            height: 500px;
+        }
+        #city-form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #city-input {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="logo-container">
+    <img src="./igeo-logo-.webp" alt="Company Logo" />
+</div>
+<div>
+    <input type="checkbox" id="worldview-1" data-satid="25544">
+    <label for="worldview-1">ISS (ZARYA)</label>
+    <input type="checkbox" id="worldview-2" data-satid="48274">
+    <label for="worldview-2">CSS (TIANHE)</label>
+    <input type="checkbox" id="worldview-3" data-satid="49044">
+    <label for="worldview-3">ISS (NAUKA)</label>
+</div>
+<div id="mapid"></div>
+<div id="weather-info"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+<script src="./map.js"></script>
+</body>
+</html>
